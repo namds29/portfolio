@@ -925,3 +925,13 @@ section {
         font-size: 0.9rem;
     }
 }
+
+@media (max-width: 500px) {
+    .hero-container {
+        padding: 35px 25px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
