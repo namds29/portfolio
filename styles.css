@@ -357,6 +357,7 @@ section {
     font-size: 1.1rem;
     margin-bottom: 20px;
     color: #666;
+    line-height: 1.7;
 }
 
 .contact-info {
@@ -369,16 +370,19 @@ section {
     gap: 15px;
     margin-bottom: 15px;
     color: #666;
+    flex-wrap: wrap;
 }
 
 .contact-item i {
     width: 20px;
     color: #667eea;
+    flex-shrink: 0;
 }
 
 .contact-item a {
     color: #667eea;
     text-decoration: none;
+    word-break: break-all;
 }
 
 .about-stats {
@@ -389,7 +393,7 @@ section {
 
 .stat-item {
     text-align: center;
-    padding: 30px;
+    padding: 30px 20px;
     background: white;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -410,6 +414,7 @@ section {
 .stat-label {
     color: #666;
     font-weight: 500;
+    font-size: 0.9rem;
 }
 
 /* Skills Section */
@@ -705,6 +710,28 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .about-content {
+        gap: 50px;
+    }
+
+    .about-text p {
+        font-size: 1.05rem;
+    }
+
+    .stat-item {
+        padding: 25px 20px;
+    }
+
+    .stat-number {
+        font-size: 2.2rem;
+    }
+
+    .contact-item {
+        gap: 12px;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -749,11 +776,38 @@ section {
     .about-content {
         grid-template-columns: 1fr;
         gap: 40px;
+        text-align: center;
+    }
+
+    .about-text {
+        order: 1;
     }
 
     .about-stats {
+        order: 2;
         flex-direction: row;
         justify-content: space-around;
+        gap: 15px;
+    }
+
+    .stat-item {
+        padding: 20px 15px;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .contact-info {
+        margin-top: 40px;
+    }
+
+    .contact-item {
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
     }
 
     .timeline::before {
@@ -827,5 +881,47 @@ section {
         width: 40px;
         height: 40px;
         font-size: 16px;
+    }
+
+    .about-content {
+        gap: 30px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .stat-item {
+        padding: 25px 15px;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .contact-info {
+        margin-top: 25px;
+    }
+
+    .contact-item {
+        gap: 8px;
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+    }
+
+    .contact-item i {
+        width: 18px;
+        font-size: 0.9rem;
     }
 }
